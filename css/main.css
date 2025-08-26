@@ -1,0 +1,449 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%);
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+header h1::before {
+    content: "🤖";
+    margin-right: 10px;
+}
+
+header h1::after {
+    content: "🐱";
+    margin-left: 10px;
+}
+
+nav {
+    margin: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+main {
+    width: 85%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+section {
+    background: #ffffff;
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, #4e4376, #2b5876);
+}
+
+h2 {
+    color: #4e4376;
+    position: relative;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(to right, #4e4376, #2b5876);
+}
+
+.hero {
+    background: linear-gradient(135deg, rgba(43, 88, 118, 0.1) 0%, rgba(78, 67, 118, 0.1) 100%);
+    padding: 40px;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.profile-image {
+    position: relative;
+}
+
+.profile-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.robot-frame::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 3px dashed #4e4376;
+    border-radius: 50%;
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.profile-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.profile-info h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.position {
+    font-size: 1.2em;
+    color: #666;
+    margin: 5px 0;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 15px;
+    text-decoration: none;
+    color: #4e4376;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    background-color: rgba(78, 67, 118, 0.1);
+    transition: all 0.3s ease;
+}
+
+social-links a:hover {
+    background-color: rgba(78, 67, 118, 0.2);
+    transform: translateY(-3px);
+}
+
+.robot-icon::before {
+    content: "🤖";
+    margin-right: 5px;
+}
+
+.cat-icon::before {
+    content: "🐱";
+    margin-right: 5px;
+}
+
+.game-icon::before {
+    content: "🎮";
+    margin-right: 5px;
+}
+
+.section-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    opacity: 0.8;
+}
+
+.news-item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.date {
+    display: inline-block;
+    background-color: rgba(78, 67, 118, 0.1);
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    color: #4e4376;
+    margin-bottom: 5px;
+}
+
+.research-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    color: #2b5876;
+    margin-top: 0;
+}
+
+.button {
+    display: inline-block;
+    background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.research-area {
+    margin-bottom: 40px;
+}
+
+.project {
+    background-color: rgba(43, 88, 118, 0.05);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.project ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.project li {
+    margin-bottom: 15px;
+}
+
+.project li strong {
+    color: #4e4376;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.publication-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.publication-list li {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.publication-list li:last-child {
+    border-bottom: none;
+}
+
+.publication-list strong {
+    color: #2b5876;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background-color: #4e4376;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -34px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #4e4376;
+    border: 2px solid white;
+}
+
+.year {
+    display: inline-block;
+    background-color: rgba(78, 67, 118, 0.1);
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    color: #4e4376;
+    margin-bottom: 5px;
+}
+
+.content h3 {
+    margin: 0 0 5px 0;
+    color: #2b5876;
+}
+
+.courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.course-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-card h3 {
+    color: #4e4376;
+    margin-top: 0;
+}
+
+.teaching-philosophy {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(43, 88, 118, 0.05);
+    border-radius: 8px;
+}
+
+.award-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.award-list li {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 30px;
+}
+
+.award-list li:last-child {
+    border-bottom: none;
+}
+
+.award-list li::before {
+    content: "🏆";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%);
+    color: #ffffff;
+    width: 100%;
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .profile-image img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .profile-info {
+        text-align: center;
+    }
+    
+    .research-cards, .courses {
+        grid-template-columns: 1fr;
+    }
+    
+    section {
+        padding: 20px;
+    }
+}

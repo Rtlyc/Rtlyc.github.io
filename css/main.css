@@ -169,17 +169,12 @@ h2::after {
     display: inline-block;
     margin-right: 15px;
     text-decoration: none;
-    color: #4e4376;
-    font-weight: bold;
-    padding: 8px 15px;
-    border-radius: 20px;
-    background-color: rgba(78, 67, 118, 0.1);
-    transition: all 0.3s ease;
+    color: #333; /* Or your preferred icon color */
+    font-size: 1.8rem; /* Adjust size as needed */
 }
 
-social-links a:hover {
-    background-color: rgba(78, 67, 118, 0.2);
-    transform: translateY(-3px);
+.social-links a:hover {
+    color: #0077b5; /* Example hover color */
 }
 
 .robot-icon::before {
@@ -223,6 +218,21 @@ social-links a:hover {
     font-size: 0.9em;
     color: #4e4376;
     margin-bottom: 5px;
+}
+
+.news ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.news li {
+    margin-bottom: 0.75rem;
+}
+
+.news .date {
+    font-weight: bold;
+    margin-right: 1em;
+    color: #555;
 }
 
 .research-cards {
@@ -307,10 +317,10 @@ social-links a:hover {
     border-bottom: none;
 }
 
-.publication-list strong {
-    color: #2b5876;
-    display: block;
-    margin-bottom: 5px;
+.publication-details .authors strong {
+    display: inline;
+    font-weight: bold;
+    color: #333;
 }
 
 .timeline {
@@ -422,6 +432,72 @@ footer {
     color: #ffffff;
     width: 100%;
     margin-top: 50px;
+}
+
+/* Publication Section */
+.publications {
+}
+
+.publication-list {
+    list-style: none;
+    padding: 0;
+}
+
+.publication-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    gap: 1.5rem;
+}
+
+.publication-image {
+    flex-shrink: 0;
+    width: 200px;
+}
+
+.publication-image img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.publication-item:hover .publication-image img {
+    transform: scale(1.05);
+}
+
+.publication-details {
+    flex: 1;
+}
+
+.publication-details h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.publication-details h3 a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.publication-details h3 a:hover {
+    text-decoration: underline;
+}
+
+.publication-details .authors {
+    margin: 0 0 0.5rem 0;
+    font-style: italic;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.publication-details .venue {
+    margin: 0;
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {

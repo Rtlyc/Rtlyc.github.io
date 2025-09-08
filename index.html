@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academic Portfolio - Robots & Cats</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
@@ -13,7 +14,6 @@
         <nav>
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="pages/research.html">Research</a></li>
                 <li><a href="pages/experience.html">Experience</a></li>
             </ul>
         </nav>
@@ -22,16 +22,16 @@
         <section class="hero">
             <div class="profile-container">
                 <div class="profile-image">
-                    <img src="https://placekitten.com/300/300" alt="Profile Image" class="robot-frame">
+                    <img src="assets/portrait.jpg" alt="Profile Image" class="robot-frame">
                 </div>
                 <div class="profile-info">
-                    <h2>Your Name</h2>
-                    <p class="position">PhD Candidate in Robotics</p>
-                    <p class="position">Game AI Researcher</p>
+                    <h2>Yuchen Liu</h2>
+                    <p class="position">3rd PhD at Purdue University</p>
+                    <!-- <p class="position">Game AI Researcher</p> -->
                     <div class="social-links">
-                        <a href="#" class="cat-icon">GitHub</a>
-                        <a href="#" class="robot-icon">LinkedIn</a>
-                        <a href="#" class="game-icon">Twitter</a>
+                        <a href="https://github.com/Rtlyc" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/yuchen-liu-40a84b180/" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://scholar.google.com/citations?user=gBDnXBwAAAAJ&hl=en&oi=ao" aria-label="Google Scholar Profile"><i class="fas fa-user-graduate"></i></a>
                     </div>
                 </div>
             </div>
@@ -39,49 +39,79 @@
 
         <section class="about-me">
             <h2><span class="robot-icon"></span> About Me</h2>
-            <p>Welcome to my academic portfolio! I'm a researcher focusing on the intersection of robotics, artificial intelligence, and game design. My work explores how robotic systems can learn from gaming environments and how cat-like agility can be implemented in robot movement patterns.</p>
-            <p>When I'm not in the lab, you can find me playing strategic board games, designing pixel art, or spending time with my cats who often inspire my research on movement algorithms.</p>
+            <p>Welcome to my academic portfolio! I am a third-year PhD student at Purdue University, advised by Dr. <a href="https://qureshiahmed.github.io/">Ahmed H. Qureshi</a>. My research lies at the intersection of robotics, physics-informed learning, and motion planning, with a focus on enabling intelligent agents to navigate and interact with complex environments efficiently and robustly. Broadly, my work develops neural field representations, physics-informed learning frameworks, and simulation platforms for scalable robot intelligence.</p>
+            <p>When I'm not in the lab, you can find me reading detective novels, playing strategic video games, or spending time with my cats who are always supporting my research!</p>
         </section>
 
         <section class="news">
             <h2><span class="cat-icon"></span> Latest News</h2>
-            <div class="news-item">
-                <span class="date">June 15, 2023</span>
-                <p>Our paper "Feline Movement Patterns in Robotic Navigation" accepted at the International Conference on Robotics.</p>
-            </div>
-            <div class="news-item">
-                <span class="date">May 3, 2023</span>
-                <p>Awarded the Innovation Grant for the project "Game-Based Learning for Autonomous Robots".</p>
-            </div>
-            <div class="news-item">
-                <span class="date">April 12, 2023</span>
-                <p>Guest lecture on "AI in Modern Gaming" at Tech University.</p>
-            </div>
+            <ul>
+                <li><span class="date">June, 2025</span> Our paper "Self-supervised Modular Neural Learning for Robot Navigation in Unknown, Large Indoor Environments" accepted at IROS 2025!</li>
+                <li><span class="date">June, 2025</span> Our paper "Physics-informed Neural Motion Planning via Domain Decomposition in Large Environments" accepted at IROS 2025!</li>
+                <li><span class="date">May, 2025</span> I am visiting the TEA Lab at Tsinghua University for a collaborative project!</li>
+                <li><span class="date">January, 2025</span> Our paper "Physics-informed Neural Mapping and Motion Planning in Unknown Environments" accepted at TRO!</li>
+            </ul>
         </section>
 
-        <section class="research-preview">
-            <h2><span class="game-icon"></span> Research Focus</h2>
-            <div class="research-cards">
-                <div class="card">
-                    <h3>Robot Learning</h3>
-                    <p>Implementing game-inspired learning algorithms in robotic systems.</p>
-                    <a href="pages/research.html#robot-learning" class="button">Learn More</a>
+        <section class="publications">
+            <h2><span class="game-icon"></span> Publications</h2>
+            <p class="joint-authors-note">* denotes joint first authors</p>
+            <div class="publication-list">
+                <div class="publication-item">
+                    <div class="publication-image">
+                        <img src="assets/fbntfields/poster.jpg" data-gif="assets/fbntfields/hover.gif" alt="Publication 5">
+                    </div>
+                    <div class="publication-details">
+                        <h3><a href="https://arxiv.org/pdf/2506.12742">Physics-informed Neural Motion Planning via Domain Decomposition in Large Environments</a></h3>
+                        <p class="authors"> <strong>Yuchen Liu</strong>, Alexiy Buynitsky, Ruiqi Ni, and Ahmed H. Qureshi </p>
+                        <p class="venue">IROS 2025</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>Feline Biomechanics</h3>
-                    <p>Studying cat movement for better robot mobility and balance.</p>
-                    <a href="pages/research.html#feline-biomechanics" class="button">Learn More</a>
+                <div class="publication-item">
+                    <div class="publication-image">
+                        <img src="assets/mntfields/poster.jpg" data-gif="assets/mntfields/hover.gif" alt="Publication 4">
+                    </div>
+                    <div class="publication-details">
+                        <h3><a href="#">Self-supervised Modular Neural Learning for Robot Navigation in Unknown, Large Indoor Environments</a></h3>
+                        <p class="authors">Wei Han Chen*, <strong>Yuchen Liu*</strong>, Alexiy Buynitsky, and Ahmed H. Qureshi</p>
+                        <p class="venue">IROS 2025</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>Game AI</h3>
-                    <p>Developing intelligent agents for complex gaming environments.</p>
-                    <a href="pages/research.html#game-ai" class="button">Learn More</a>
+                <div class="publication-item">
+                    <div class="publication-image">
+                        <img src="assets/antfields/poster.jpg" data-gif="assets/antfields/hover.gif" alt="Publication 3">
+                    </div>
+                    <div class="publication-details">
+                        <h3><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10916504">Physics-informed Neural Mapping and Motion Planning in Unknown Environments</a></h3>
+                        <p class="authors"> <strong>Yuchen Liu*</strong>, Ruiqi Ni*, Ahmed H. Qureshi</p>
+                        <p class="venue">TRO 2025</p>
+                    </div>
+                </div>
+                <div class="publication-item">
+                    <div class="publication-image">
+                        <img src="assets/icra2022/poster.jpg" data-gif="assets/icra2022/hover.gif" alt="Publication 2">
+                    </div>
+                    <div class="publication-details">
+                        <h3><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9811965">A deep reinforcement learning environment for particle robot navigation and object manipulation</a></h3>
+                        <p class="authors">Jeremy Shen*, Erdong Xiao*, <strong>Yuchen Liu</strong>, Chen Feng</p>
+                        <p class="venue">ICRA 2022</p>
+                    </div>
+                </div>
+                <div class="publication-item">
+                    <div class="publication-image">
+                        <img src="assets/iros2021/poster.jpg" data-gif="assets/iros2021/hover.gif" alt="Publication 1">
+                    </div>
+                    <div class="publication-details">
+                        <h3><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9636114">Mobile 3d printing robot simulation with viscoelastic fluids</a></h3>
+                        <p class="authors">Uljad Berdica*, Yuewei Fu*, <strong>Yuchen Liu*</strong>, Emmanouil Angelidis*, Chen Feng</p>
+                        <p class="venue">IROS 2021</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2023 Your Name | Robots • Cats • Games</p>
+        <p>&copy; 2025 Yuchen Liu | Academic Portfolio</p>
     </footer>
     <script src="js/main.js"></script>
 </body>

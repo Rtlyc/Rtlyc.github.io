@@ -51,4 +51,26 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    // Handle image source swapping on mouse hover for publication images
+    const publicationImages = document.querySelectorAll('.publication-image img');
+
+    publicationImages.forEach(img => {
+        const staticSrc = img.src;
+        const gifSrc = img.dataset.gif;
+
+        if (gifSrc) {
+            // Preload GIF
+            const preloadGif = new Image();
+            preloadGif.src = gifSrc;
+
+            img.addEventListener('mouseover', () => {
+                img.src = gifSrc;
+            });
+
+            img.addEventListener('mouseout', () => {
+                img.src = staticSrc;
+            });
+        }
+    });
 });

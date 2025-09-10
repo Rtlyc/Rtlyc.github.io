@@ -192,6 +192,11 @@ h2::after {
     margin-right: 5px;
 }
 
+.news-icon::before {
+    content: "📰";
+    margin-right: 5px;
+}
+
 .section-icon {
     position: absolute;
     top: 20px;
@@ -498,6 +503,43 @@ footer {
 .publication-details .venue {
     margin: 0;
     font-weight: bold;
+}
+
+/* Cats Section */
+.cats-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.cat-card {
+    flex: 1;
+    text-align: center;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.cat-card:hover {
+    transform: translateY(-5px);
+}
+
+.cat-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cat-card h3 {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    color: #4e4376;
+    font-size: 1.2rem;
 }
 
 @media (max-width: 768px) {

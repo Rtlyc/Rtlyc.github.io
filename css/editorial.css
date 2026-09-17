@@ -9,7 +9,7 @@
 .cat-image{position:relative;width:72px;height:72px;flex-shrink:0;overflow:hidden;border-radius:50%}
 .cat-image img{display:block;width:100%;height:100%;border-radius:0;object-fit:cover}
 .cat-image img[alt="Congo"]{transform:translate(-5%,-10%) rotate(90deg) scale(1.5);object-position:85% 50%}
-.cat-image img[alt="Ponyo"]{object-position:60% 65%}
+.cat-image img[alt="Ponyo"]{object-position:50% 100%;transform:translate(-48%,0) scale(3.2)}
 .cat-card h3{margin:0;font-size:14px;color:var(--muted)}
 @media(max-width:680px){.cats-container{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px}.cat-image{width:55px;height:55px}}
 

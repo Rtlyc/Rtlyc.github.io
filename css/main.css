@@ -475,6 +475,7 @@ footer {
 
 .publication-details {
     flex: 1;
+    min-width: 0;
 }
 
 .publication-details h3 {
@@ -495,9 +496,8 @@ footer {
 .publication-details .authors {
     margin: 0 0 0.5rem 0;
     font-style: italic;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
+    overflow-wrap: anywhere;
 }
 
 .publication-details .venue {
@@ -564,4 +564,25 @@ footer {
     section {
         padding: 20px;
     }
+}
+/* Keep the carrying demo uncropped in the shared publication thumbnail slot. */
+.publication-image img.hntfields-preview {
+    object-fit: contain;
+    background: #fff;
+}
+@media (max-width: 640px) {
+    .publication-item {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .publication-details {
+        width: 100%;
+        overflow-wrap: anywhere;
+    }
+}
+
+/* Highlight the T-RO paper recognition consistently across the site. */
+.award-highlight {
+    color: #c62828;
+    font-weight: 700;
 }

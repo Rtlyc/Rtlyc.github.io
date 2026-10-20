@@ -15,3 +15,15 @@
 
 /* The cats section supplies the divider after the publication list. */
 .publication-list > .publication-item:last-child{border-bottom:0}
+
+/* New publication entries follow the established editorial layout. */
+.preprints h2{font-size:32px;font-weight:400}
+.publication-demo{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#1c211d;border-radius:2px}
+.publication-video-caption{margin:7px 0 0;font:12px/1.5 Arial,Helvetica,sans-serif;color:var(--muted)}
+.publication-demo--shape{aspect-ratio:42/31;background:#fff}
+
+.news-archive{margin-top:14px}
+.news-archive summary{width:fit-content;cursor:pointer;color:var(--accent);font-size:13px;font-weight:600}
+.news-archive[open] summary{margin-bottom:14px}
+
+.news .venue-abbr{white-space:nowrap}
